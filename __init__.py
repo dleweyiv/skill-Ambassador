@@ -155,6 +155,12 @@ class AmbassadorSkill(MycroftSkill):
 				church_intent = IntentBuilder("ChurchIntent"). \
 						require("ChurchKeyword").build()
 				self.register_intent(church_intent, self.handle_church_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				total_enrollment_intent = IntentBuilder("TotalEnrollmentIntent"). \
+						require("TotalEnrollmentKeyword").build()
+				self.register_intent(total_enrollment_intent, self.handle_total_enrollment_intent)
 
 		def handle_fun_fact_villanova_intent(self, message):
 				GPIO.set("GPIO1","Off")
@@ -585,6 +591,26 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
 				self.speak_dialog("church")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_total_enrollment_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("total.enrollment")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
