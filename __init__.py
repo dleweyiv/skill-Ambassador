@@ -161,6 +161,48 @@ class AmbassadorSkill(MycroftSkill):
 				total_enrollment_intent = IntentBuilder("TotalEnrollmentIntent"). \
 						require("TotalEnrollmentKeyword").build()
 				self.register_intent(total_enrollment_intent, self.handle_total_enrollment_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				aerospace_engineering_intent = IntentBuilder("AerospaceEngineeringIntent"). \
+						require("AerospaceEngineeringKeyword").build()
+				self.register_intent(aerospace_engineering_intent, self.handle_aerospace_engineering_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				biochemical_engineering_intent = IntentBuilder("BiochemicalEngineeringIntent"). \
+						require("BiochemicalEngineeringKeyword").build()
+				self.register_intent(biochemical_engineering_intent, self.handle_biochemical_engineering_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				bioengineering_engineering_intent = IntentBuilder("BioengineeringEngineeringIntent"). \
+						require("BioengineeringEngineeringKeyword").build()
+				self.register_intent(bioengineering_engineering_intent, self.handle_bioengineering_engineering_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				biomedical_engineering_intent = IntentBuilder("BiomedicalEngineeringIntent"). \
+						require("BiomedicalEngineeringKeyword").build()
+				self.register_intent(biomedical_engineering_intent, self.handle_biomedical_engineering_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				entrepreneurship_engineering_intent = IntentBuilder("EntrepreneurshipEngineeringIntent"). \
+						require("EntrepreneurshipEngineeringKeyword").build()
+				self.register_intent(entrepreneurship_engineering_intent, self.handle_entrepreneurship_engineering_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				mechatronics_engineering_intent = IntentBuilder("MechatronicsEngineeringIntent"). \
+						require("MechatronicsEngineeringKeyword").build()
+				self.register_intent(mechatronics_engineering_intent, self.handle_mechatronics_engineering_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				sustainability_engineering_intent = IntentBuilder("SustainabilityEngineeringIntent"). \
+						require("SustainabilityEngineeringKeyword").build()
+				self.register_intent(sustainability_engineering_intent, self.handle_sustainability_engineering_intent)
 
 		def handle_fun_fact_villanova_intent(self, message):
 				GPIO.set("GPIO1","Off")
@@ -611,6 +653,146 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
 				self.speak_dialog("total.enrollment")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_aerospace_engineering_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("aerospace.engineering")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_biochemical_engineering_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("biochemical.engineering")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+		
+		def handle_bioengineering_engineering_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("bioengineering.engineering")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_biomedical_engineering_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("biomedical.engineering")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_entrepreneurship_engineering_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("entrepreneurship.engineering")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_mechatronics_engineering_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("mechatronics.engineering")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_sustainability_engineering_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("sustainability.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
