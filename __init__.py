@@ -30,25 +30,7 @@ class AmbassadorSkill(MycroftSkill):
 						require("FunFactVillanovaKeyword").build()
 				self.register_intent(fun_fact_villanova_intent, self.handle_fun_fact_villanova_intent)
 
-				# ---------------------------------------------------------------------------------
-
-				college_majors_intent = IntentBuilder("CollegeMajorsIntent"). \
-						require("CollegeMajorsKeyword").build()
-				self.register_intent(college_majors_intent, self.handle_college_majors_intent)
-
-				# ---------------------------------------------------------------------------------
-
-				college_minors_intent = IntentBuilder("CollegeMinorsIntent"). \
-						require("CollegeMinorsKeyword").build()
-				self.register_intent(college_minors_intent, self.handle_college_minors_intent)
-
-				# ---------------------------------------------------------------------------------
-
-				engineering_synopsis_intent = IntentBuilder("EngineeringSynopsisIntent"). \
-						require("EngineeringSynopsisKeyword").build()
-				self.register_intent(engineering_synopsis_intent, self.handle_engineering_synopsis_intent)
-
-				# ---------------------------------------------------------------------------------
+				# -------------------------------------------------------------------------------
 
 				chemical_engineering_intent = IntentBuilder("ChemicalEngineeringIntent"). \
 						require("ChemicalEngineeringKeyword").build()
@@ -236,27 +218,47 @@ class AmbassadorSkill(MycroftSkill):
 				
 				# ---------------------------------------------------------------------------------
 
-				Happy_Face_intent = IntentBuilder("happyfaceIntent"). \
+				happy_face_intent = IntentBuilder("HappyFaceIntent"). \
 						require("HappyFaceKeyword").build()
-				self.register_intent(Happy_Face_intent, self.handle_Handle_Face_intent)
+				self.register_intent(happy_face_intent, self.handle_happy_face_intent)
 				
 				# ---------------------------------------------------------------------------------
 
 				Sad_Face_intent = IntentBuilder("sadfaceIntent"). \
 						require("SadFaceKeyword").build()
-				self.register_intent(Sad_Face_intent, self.handle_Sad_Face_intent)
+				self.register_intent(sad_face_intent, self.handle_Sad_Face_intent)
 				
 				# ---------------------------------------------------------------------------------
 
-				Mad_Face_intent = IntentBuilder("madfaceIntent"). \
+				mad_face_intent = IntentBuilder("MadFaceIntent"). \
 						require("MadFaceKeyword").build()
-				self.register_intent(Mad_Face_intent, self.handle_Mad_Face_intent)
+				self.register_intent(mad_face_intent, self.handle_mad_face_intent)
 
 				# ---------------------------------------------------------------------------------
 
-				Thinking_Face_intent = IntentBuilder("thinkingfaceIntent"). \
+				thinking_face_intent = IntentBuilder("thinkingfaceIntent"). \
 						require("ThinkingFaceKeyword").build()
-				self.register_intent(Thinking_Face_intent, self.handle_Thinking_Face_intent)
+				self.register_intent(thinking_face_intent, self.handle_thinking_face_intent)
+				
+				#----------------------------------------------------------------------------------
+				
+				college_majors_intent = IntentBuilder("CollegeMajorsIntent"). \
+						require("CollegeMajorsKeyword").build()
+				self.register_intent(college_majors_intent, self.handle_college_majors_intent)
+
+				# ---------------------------------------------------------------------------------
+
+				college_minors_intent = IntentBuilder("CollegeMinorsIntent"). \
+						require("CollegeMinorsKeyword").build()
+				self.register_intent(college_minors_intent, self.handle_college_minors_intent)
+
+				# ---------------------------------------------------------------------------------
+
+				engineering_synopsis_intent = IntentBuilder("EngineeringSynopsisIntent"). \
+						require("EngineeringSynopsisKeyword").build()
+				self.register_intent(engineering_synopsis_intent, self.handle_engineering_synopsis_intent)
+
+				# ---------------------------------------------------------------------------------
 				
 		def handle_fun_fact_villanova_intent(self, message):
 				GPIO.set("GPIO2","Off")
@@ -962,84 +964,36 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 		
 		def handle_happy_face_intent(self, message):
-				GPIO.set("GPIO2","Off")
-				GPIO.set("GPIO3","On")
-				GPIO.set("GPIO4","Off")
-				time.sleep(1)
-				self.speak_dialog("happy.face")
-				time.sleep(1) 									#I put the V eyes here
-				GPIO.set("GPIO4","On")
-
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(9)
-				except:
-					time.sleep(9)
-
+				GPIO.set("GPIO2","On")
 				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
+				time.sleep(5)
+				GPIO.set("GPIO2","Off")
 				
 		def handle_sad_face_intent(self, message):
-				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO2","On")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
-				time.sleep(1)
-				self.speak_dialog("university.ranking")
-				time.sleep(1) 									#I put the V eyes here
-				GPIO.set("GPIO4","On")
-
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(9)
-				except:
-					time.sleep(9)
-
+				time.sleep(5)
+				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
 				
 		def handle_mad_face_intent(self, message):
-				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO2","On")
 				GPIO.set("GPIO3","On")
-				GPIO.set("GPIO4","Off")
-				time.sleep(1)
-				self.speak_dialog("university.ranking")
-				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
-
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(9)
-				except:
-					time.sleep(9)
-
+				time.sleep(5) 									#I put the V eyes here
+				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","Off")
 				
 		def handle_thinking_face_intent(self, message):
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
-				time.sleep(1)
-				self.speak_dialog("university.ranking")
-				time.sleep(1) 									#I put the V eyes here
-				GPIO.set("GPIO4","On")
-
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(9)
-				except:
-					time.sleep(9)
-
+				time.sleep(5)
 				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
 				
 		def stop(self):
 				pass
