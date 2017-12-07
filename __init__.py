@@ -197,13 +197,43 @@ class AmbassadorSkill(MycroftSkill):
 				mechatronics_engineering_intent = IntentBuilder("MechatronicsEngineeringIntent"). \
 						require("MechatronicsEngineeringKeyword").build()
 				self.register_intent(mechatronics_engineering_intent, self.handle_mechatronics_engineering_intent)
-				
+
 				# ---------------------------------------------------------------------------------
 
 				sustainability_engineering_intent = IntentBuilder("SustainabilityEngineeringIntent"). \
 						require("SustainabilityEngineeringKeyword").build()
 				self.register_intent(sustainability_engineering_intent, self.handle_sustainability_engineering_intent)
+				
+				# ---------------------------------------------------------------------------------
 
+				alumni_network_intent = IntentBuilder("AlumniNetworkIntent"). \
+						require("AlumniNetworkKeyword").build()
+				self.register_intent(alumni_network_intent, self.handle_alumni_network_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				social_housing_intent = IntentBuilder("SocialHousingIntent"). \
+						require("SocialHousingKeyword").build()
+				self.register_intent(social_housing_intent, self.handle_social_housing_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				villanova_basketball_intent = IntentBuilder("VillanovaBasketballIntent"). \
+						require("VillanovaBasketballKeyword").build()
+				self.register_intent(villanova_basketball_intent, self.handle_villanova_basketball_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				villanova_sports_intent = IntentBuilder("VillanovaSportsIntent"). \
+						require("VillanovaSportsKeyword").build()
+				self.register_intent(villanova_sports_intent, self.handle_villanova_sports_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				university_ranking_intent = IntentBuilder("UniversityRankingIntent"). \
+						require("UniversityRankingKeyword").build()
+				self.register_intent(university_ranking_intent, self.handle_university_ranking_intent)
+				
 		def handle_fun_fact_villanova_intent(self, message):
 				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
@@ -793,6 +823,106 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
 				self.speak_dialog("sustainability.engineering")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_alumni_network_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("alumni.network")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_social_housing_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("social.housing")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+		
+		def handle_villanova_basketball_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("villanova.basketball")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_villanova_sports_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("villanova.sports")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(8)
+				except:
+					time.sleep(8)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_university_ranking_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("university.ranking")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
