@@ -235,10 +235,10 @@ class AmbassadorSkill(MycroftSkill):
 				self.register_intent(university_ranking_intent, self.handle_university_ranking_intent)
 				
 		def handle_fun_fact_villanova_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("fun.fact.villanova")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO2","On")
@@ -249,18 +249,18 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(5)
+						time.sleep(10)
 				except:
-					time.sleep(5)
+					time.sleep(10)
 
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO4","On")
 
 		def handle_college_majors_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("college.majors")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -277,10 +277,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 
 		def handle_college_minors_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("college.minors")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -297,10 +297,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 
 		def handle_engineering_synopsis_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("engineering.synopsis")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -310,17 +310,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(10)
 				except:
-					time.sleep(8)
+					time.sleep(10)
 
 				GPIO.set("GPIO3","Off")
 
 		def handle_chemical_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("chemical.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -337,10 +337,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 
 		def handle_computer_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("computer.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -350,17 +350,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(10)
 				except:
-					time.sleep(8)
+					time.sleep(10)
 
 				GPIO.set("GPIO3","Off")
 
 		def handle_civil_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("civil.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -377,10 +377,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 
 		def handle_mechanical_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("mechanical.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -390,17 +390,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(13)
 				except:
-					time.sleep(8)
+					time.sleep(13)
 
 				GPIO.set("GPIO3","Off")
 
 		def handle_electrical_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("electrical.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -410,17 +410,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(12)
 				except:
-					time.sleep(8)
+					time.sleep(12)
 
 				GPIO.set("GPIO3","Off")
 
 		def handle_water_fountain_directions_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("water.fountain.directions")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -430,18 +430,18 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(5)
 				except:
-					time.sleep(8)
+					time.sleep(5)
 
 				GPIO.set("GPIO3","Off")
 
 
 		def handle_bathroom_directions_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("bathroom.directions")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -451,17 +451,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(5)
 				except:
-					time.sleep(8)
+					time.sleep(5)
 
 				GPIO.set("GPIO3","Off")
 
 		def handle_liberal_arts_synopsis_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("liberal.arts.synopsis")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -471,17 +471,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(11)
 				except:
-					time.sleep(8)
+					time.sleep(11)
 
 				GPIO.set("GPIO3","Off")
 
 		def handle_vsb_synopsis_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("vsb.synopsis")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -491,17 +491,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(9)
 				except:
-					time.sleep(8)
+					time.sleep(9)
 
 				GPIO.set("GPIO3","Off")
 
 		def handle_nursing_synopsis_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("nursing.synopsis")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -511,17 +511,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(12)
 				except:
-					time.sleep(8)
+					time.sleep(12)
 
 				GPIO.set("GPIO3","Off")
 
 		def handle_campus_size_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("campus.size")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -531,17 +531,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(7)
 				except:
-					time.sleep(8)
+					time.sleep(7)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_class_size_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("class.size")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -551,17 +551,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(4)
 				except:
-					time.sleep(8)
+					time.sleep(4)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_graduation_rate_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("graduation.rate")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -571,17 +571,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(3)
 				except:
-					time.sleep(8)
+					time.sleep(3)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_engineering_resources_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("engineering.resources")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -591,17 +591,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(11)
 				except:
-					time.sleep(8)
+					time.sleep(11)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_engineering_service_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("engineering.service")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -611,17 +611,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(10)
 				except:
-					time.sleep(8)
+					time.sleep(10)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_engineering_study_abroad_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("engineering.study.abroad")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -638,10 +638,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				
 		def handle_engineering_freshman_curriculum_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("engineering.freshman.curriculum")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -651,17 +651,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(11)
 				except:
-					time.sleep(8)
+					time.sleep(11)
 
 				GPIO.set("GPIO3","Off")
 			
 		def handle_church_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("church")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -671,17 +671,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(10)
 				except:
-					time.sleep(8)
+					time.sleep(10)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_total_enrollment_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("total.enrollment")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -691,17 +691,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(5)
 				except:
-					time.sleep(8)
+					time.sleep(5)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_aerospace_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("aerospace.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -718,10 +718,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				
 		def handle_biochemical_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("biochemical.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -738,10 +738,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 		
 		def handle_bioengineering_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("bioengineering.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -758,10 +758,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				
 		def handle_biomedical_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("biomedical.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -771,17 +771,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(10)
 				except:
-					time.sleep(8)
+					time.sleep(10)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_entrepreneurship_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("entrepreneurship.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -798,10 +798,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				
 		def handle_mechatronics_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("mechatronics.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -811,17 +811,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(11)
 				except:
-					time.sleep(8)
+					time.sleep(11)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_sustainability_engineering_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("sustainability.engineering")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -838,10 +838,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				
 		def handle_alumni_network_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("alumni.network")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -851,17 +851,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(11)
 				except:
-					time.sleep(8)
+					time.sleep(11)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_social_housing_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("social.housing")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -878,10 +878,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 		
 		def handle_villanova_basketball_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("villanova.basketball")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -891,17 +891,17 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(13)
 				except:
-					time.sleep(8)
+					time.sleep(13)
 
 				GPIO.set("GPIO3","Off")
 				
 		def handle_villanova_sports_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("villanova.sports")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -918,10 +918,10 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				
 		def handle_university_ranking_intent(self, message):
-				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				time.sleep(1)
 				self.speak_dialog("university.ranking")
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
@@ -931,9 +931,9 @@ class AmbassadorSkill(MycroftSkill):
 					mycroft.util.wait_while_speaking()
 					end = time.time()
 					if (end - start) < 1:
-						time.sleep(8)
+						time.sleep(9)
 				except:
-					time.sleep(8)
+					time.sleep(9)
 
 				GPIO.set("GPIO3","Off")
 		
