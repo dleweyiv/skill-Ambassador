@@ -234,6 +234,30 @@ class AmbassadorSkill(MycroftSkill):
 						require("UniversityRankingKeyword").build()
 				self.register_intent(university_ranking_intent, self.handle_university_ranking_intent)
 				
+				# ---------------------------------------------------------------------------------
+
+				Happy_Face_intent = IntentBuilder("happyfaceIntent"). \
+						require("HappyFaceKeyword").build()
+				self.register_intent(Happy_Face_intent, self.handle_Handle_Face_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				Sad_Face_intent = IntentBuilder("sadfaceIntent"). \
+						require("SadFaceKeyword").build()
+				self.register_intent(Sad_Face_intent, self.handle_Sad_Face_intent)
+				
+				# ---------------------------------------------------------------------------------
+
+				Mad_Face_intent = IntentBuilder("madfaceIntent"). \
+						require("MadFaceKeyword").build()
+				self.register_intent(Mad_Face_intent, self.handle_Mad_Face_intent)
+
+				# ---------------------------------------------------------------------------------
+
+				Thinking_Face_intent = IntentBuilder("thinkingfaceIntent"). \
+						require("ThinkingFaceKeyword").build()
+				self.register_intent(Thinking_Face_intent, self.handle_Thinking_Face_intent)
+				
 		def handle_fun_fact_villanova_intent(self, message):
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
@@ -937,8 +961,89 @@ class AmbassadorSkill(MycroftSkill):
 
 				GPIO.set("GPIO3","Off")
 		
+		def handle_happy_face_intent(self, message):
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				time.sleep(1)
+				self.speak_dialog("happy.face")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(9)
+				except:
+					time.sleep(9)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_sad_face_intent(self, message):
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				time.sleep(1)
+				self.speak_dialog("university.ranking")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(9)
+				except:
+					time.sleep(9)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_mad_face_intent(self, message):
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				time.sleep(1)
+				self.speak_dialog("university.ranking")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(9)
+				except:
+					time.sleep(9)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_thinking_face_intent(self, message):
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				time.sleep(1)
+				self.speak_dialog("university.ranking")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(9)
+				except:
+					time.sleep(9)
+
+				GPIO.set("GPIO3","Off")
+				
 		def stop(self):
 				pass
 
+			
 def create_skill():
 		return AmbassadorSkill()
