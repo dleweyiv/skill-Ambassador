@@ -258,6 +258,12 @@ class AmbassadorSkill(MycroftSkill):
 						require("EngineeringSynopsisKeyword").build()
 				self.register_intent(engineering_synopsis_intent, self.handle_engineering_synopsis_intent)
 				
+				# ---------------------------------------------------------------------------------
+
+				sleeping_intent = IntentBuilder("SleepingIntent"). \
+						require("SleepingKeyword").build()
+				self.register_intent(sleeping_intent, self.handle_sleeping_intent)
+				
 		def handle_fun_fact_villanova_intent(self, message):
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
@@ -992,6 +998,13 @@ class AmbassadorSkill(MycroftSkill):
 					time.sleep(10)
 
 				GPIO.set("GPIO3","Off")
+				
+		def sleeping_synopsis_intent(self, message):
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","Off")
+				time.sleep(1)
+				
 				
 		def stop(self):
 				pass
