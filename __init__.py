@@ -31,6 +31,24 @@ class AmbassadorSkill(MycroftSkill):
 				self.register_intent(fun_fact_villanova_intent, self.handle_fun_fact_villanova_intent)
 
 				# -------------------------------------------------------------------------------
+				
+				rolle_intro_intent = IntentBuilder("IntroIntent"). \
+						require("RolleIntroKeyword").build()
+				self.register_intent(rolle_intro_intent, self.handle_rolle_intro_intent)
+
+				# -------------------------------------------------------------------------------
+				
+				marcell_intro_intent = IntentBuilder("MarcellIntroIntent"). \
+						require("MarcellIntroKeyword").build()
+				self.register_intent(marcell_intro_intent, self.handle_marcell_intro_intent)
+
+				# -------------------------------------------------------------------------------
+				
+				seafood_plate_intent = IntentBuilder("SeafoodPlateIntent"). \
+						require("SeafoodPlateKeyword").build()
+				self.register_intent(seafood_plate_intent, self.handle_seafood_plate_intent)
+
+				# -------------------------------------------------------------------------------
 
 				chemical_engineering_intent = IntentBuilder("ChemicalEngineeringIntent"). \
 						require("ChemicalEngineeringKeyword").build()
@@ -265,24 +283,6 @@ class AmbassadorSkill(MycroftSkill):
 				self.register_intent(sleeping_intent, self.handle_sleeping_intent)
 				
 				# ---------------------------------------------------------------------------------
-
-				rolle_intro_intent = IntentBuilder("IntroIntent"). \
-						require("RolleIntroKeyword").build()
-				self.register_intent(rolle_intro_intent, self.handle_rolle_intro_intent)
-
-				# -------------------------------------------------------------------------------
-				
-				marcell_intro_intent = IntentBuilder("MarcellIntroIntent"). \
-						require("MarcellIntroKeyword").build()
-				self.register_intent(marcell_intro_intent, self.handle_marcell_intro_intent)
-
-				# -------------------------------------------------------------------------------
-				
-				seafood_plate_intent = IntentBuilder("SeafoodPlateIntent"). \
-						require("SeafoodPlateKeyword").build()
-				self.register_intent(seafood_plate_intent, self.handle_seafood_plate_intent)
-
-				# -------------------------------------------------------------------------------
 				
 		def handle_fun_fact_villanova_intent(self, message):
 				GPIO.set("GPIO2","Off")
@@ -305,6 +305,66 @@ class AmbassadorSkill(MycroftSkill):
 
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO4","On")
+				
+		def handle_rolle_intro_intent(self, message):
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				time.sleep(1)
+				self.speak_dialog("rolle.intro")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(5)
+				except:
+					time.sleep(5)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_marcell_intro_intent(self, message):
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				time.sleep(1)
+				self.speak_dialog("marcell.intro")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(5)
+				except:
+					time.sleep(5)
+
+				GPIO.set("GPIO3","Off")
+				
+		def handle_seafood_plate_intent(self, message):
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				time.sleep(1)
+				self.speak_dialog("seafood.plate")
+				time.sleep(1) 									#I put the V eyes here
+				GPIO.set("GPIO4","On")
+
+				try:
+					start = time.time()
+					mycroft.util.wait_while_speaking()
+					end = time.time()
+					if (end - start) < 1:
+						time.sleep(5)
+				except:
+					time.sleep(5)
+
+				GPIO.set("GPIO3","Off")
 
 		def handle_chemical_engineering_intent(self, message):
 				GPIO.set("GPIO2","Off")
@@ -1024,66 +1084,6 @@ class AmbassadorSkill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				GPIO.set("GPIO4","Off")
 				time.sleep(1)
-		
-		def handle_rolle_intro_intent(self, message):
-				GPIO.set("GPIO2","Off")
-				GPIO.set("GPIO3","On")
-				GPIO.set("GPIO4","Off")
-				time.sleep(1)
-				self.speak_dialog("rolle.intro")
-				time.sleep(1) 									#I put the V eyes here
-				GPIO.set("GPIO4","On")
-
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(5)
-				except:
-					time.sleep(5)
-
-				GPIO.set("GPIO3","Off")
-				
-		def handle_marcell_intro_intent(self, message):
-				GPIO.set("GPIO2","Off")
-				GPIO.set("GPIO3","On")
-				GPIO.set("GPIO4","Off")
-				time.sleep(1)
-				self.speak_dialog("marcell.intro")
-				time.sleep(1) 									#I put the V eyes here
-				GPIO.set("GPIO4","On")
-
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(5)
-				except:
-					time.sleep(5)
-
-				GPIO.set("GPIO3","Off")
-				
-		def handle_seafood_plate_intent(self, message):
-				GPIO.set("GPIO2","Off")
-				GPIO.set("GPIO3","On")
-				GPIO.set("GPIO4","Off")
-				time.sleep(1)
-				self.speak_dialog("seafood.plate")
-				time.sleep(1) 									#I put the V eyes here
-				GPIO.set("GPIO4","On")
-
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(5)
-				except:
-					time.sleep(5)
-
-				GPIO.set("GPIO3","Off")
 				
 		def stop(self):
 				pass
