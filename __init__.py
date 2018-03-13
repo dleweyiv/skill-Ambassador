@@ -400,14 +400,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(12)
-				except:
-					time.sleep(12)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 
@@ -420,14 +413,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(5)
-				except:
-					time.sleep(5)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 
@@ -441,14 +427,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(5)
-				except:
-					time.sleep(5)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 
@@ -461,14 +440,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(11)
-				except:
-					time.sleep(11)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 
@@ -481,14 +453,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(9)
-				except:
-					time.sleep(9)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 
@@ -501,14 +466,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(12)
-				except:
-					time.sleep(12)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 
@@ -521,14 +479,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(7)
-				except:
-					time.sleep(7)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -541,14 +492,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(4)
-				except:
-					time.sleep(4)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -561,14 +505,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(3)
-				except:
-					time.sleep(3)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -581,14 +518,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(11)
-				except:
-					time.sleep(11)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -601,14 +531,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(10)
-				except:
-					time.sleep(10)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -621,14 +544,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -641,14 +557,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(11)
-				except:
-					time.sleep(11)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 			
@@ -661,14 +570,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(10)
-				except:
-					time.sleep(10)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -681,14 +583,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(5)
-				except:
-					time.sleep(5)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -701,14 +596,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -721,14 +609,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 		
@@ -741,14 +622,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -761,14 +635,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(10)
-				except:
-					time.sleep(10)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -781,14 +648,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -801,14 +661,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(11)
-				except:
-					time.sleep(11)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -821,14 +674,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -841,14 +687,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(11)
-				except:
-					time.sleep(11)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -861,14 +700,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 		
@@ -881,14 +713,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(13)
-				except:
-					time.sleep(13)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -901,14 +726,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
@@ -921,14 +739,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(9)
-				except:
-					time.sleep(9)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 		
@@ -973,14 +784,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 
@@ -993,14 +797,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(8)
-				except:
-					time.sleep(8)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 
@@ -1013,14 +810,7 @@ class AmbassadorSkill(MycroftSkill):
 				time.sleep(1) 									#I put the V eyes here
 				GPIO.set("GPIO4","On")
 
-				try:
-					start = time.time()
-					mycroft.util.wait_while_speaking()
-					end = time.time()
-					if (end - start) < 1:
-						time.sleep(10)
-				except:
-					time.sleep(10)
+				mycroft.audio.wait_while_speaking()
 
 				GPIO.set("GPIO3","Off")
 				
